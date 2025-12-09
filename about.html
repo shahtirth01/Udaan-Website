@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Udaan Festival</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="assets/logo-new.png" alt="Udaan Logo" style="height: 60px; vertical-align: middle;">
+            UDAAN
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active-link">About</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>About Udaan</h1>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="about-intro">
+                <h2 class="section-title">Soaring Beyond Horizons</h2>
+                <p
+                    style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: var(--text-dim);">
+                    Udaan is the annual flagship event organized by the Student Development Council,
+                    bringing together innovation, creativity, and learning through workshops, talks,
+                    and competitions.
+                </p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="about-tabs">
+                <button class="about-tab-btn active" data-tab="gallery">Gallery</button>
+                <button class="about-tab-btn" data-tab="sponsorship">Sponsorship</button>
+                <button class="about-tab-btn" data-tab="social">Social Media</button>
+                <button class="about-tab-btn" data-tab="team">Team Members</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="about-tab-content active" id="gallery-tab">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Event Gallery</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-placeholder">
+                        <p>📸 Gallery images coming soon</p>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <p>📸 Gallery images coming soon</p>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <p>📸 Gallery images coming soon</p>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <p>📸 Gallery images coming soon</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-tab-content" id="sponsorship-tab">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Our Sponsors</h3>
+                <div class="sponsors-grid">
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo">Google</div>
+                        <p>Technology Partner</p>
+                    </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo">Amazon</div>
+                        <p>Cloud Partner</p>
+                    </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo">Microsoft</div>
+                        <p>Enterprise Partner</p>
+                    </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo">Meta</div>
+                        <p>Innovation Partner</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-tab-content" id="social-tab">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-card" data-platform="linkedin">
+                        <div class="social-icon">💼</div>
+                        <h4>LinkedIn</h4>
+                        <p>Link will be added soon</p>
+                    </a>
+                    <a href="#" class="social-card" data-platform="instagram">
+                        <div class="social-icon">📷</div>
+                        <h4>Instagram</h4>
+                        <p>Link will be added soon</p>
+                    </a>
+                    <a href="mailto:" class="social-card" data-platform="email">
+                        <div class="social-icon">✉️</div>
+                        <h4>Email</h4>
+                        <p>Email will be added soon</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Team Tab Content (Nested) -->
+            <div class="about-tab-content" id="team-tab">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Meet the Team</h3>
+
+                <!-- Sub Tabs -->
+                <div class="team-tabs">
+                    <button class="team-tab-btn active" data-tab="faculty">Faculty</button>
+                    <button class="team-tab-btn" data-tab="students">Students</button>
+                </div>
+
+                <!-- Faculty Content -->
+                <div class="team-tab-content active" id="faculty-tab">
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <h4>Akash Anil</h4>
+                            <p>Faculty Coordinator</p>
+                        </div>
+                        <div class="team-card">
+                            <h4>Biswajit Patra</h4>
+                            <p>Faculty Coordinator</p>
+                        </div>
+                        <div class="team-card">
+                            <h4>Feroz Sir</h4>
+                            <p>Faculty Advisor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Content -->
+                <div class="team-tab-content" id="students-tab">
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <h4>Madhav</h4>
+                            <p>Student Lead</p>
+                        </div>
+                        <div class="team-card">
+                            <h4>Tirth</h4>
+                            <p>Web Developer</p>
+                        </div>
+                        <div class="team-card">
+                            <h4>Aarush</h4>
+                            <p>Event Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Udaan Festival | Student Development Council</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Udaan Festival</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP for Smooth Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="assets/logo-new.png" alt="Udaan Logo" style="height: 60px; vertical-align: middle;">
+            UDAAN
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active-link">Home</a>
+            <a href="about.html">About</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="logo">
+            SDC
+            <img src="assets/sdc-logo.png" alt="SDC Logo"
+                style="height: 60px; vertical-align: middle; margin-left: 10px;">
+        </div>
+    </nav>
+
+    <header class="hero">
+        <canvas id="fireworks-canvas"></canvas>
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="eyebrow">Student Development Council Presents</p>
+            <img src="assets/logo-new.png" alt="Udaan Bird" class="hero-logo-img"
+                style="height: 250px; margin-bottom: 2rem; filter: drop-shadow(0 0 20px rgba(255,204,41,0.3));">
+
+            <h1 class="title-main">UDAAN <span class="year">'26</span></h1>
+            <p class="subtitle">Soar Beyond Horizons</p>
+            <div class="cta-group">
+                <a href="events.html" class="btn btn-primary">Via Events</a>
+                <a href="about.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Udaan Festival | Student Development Council</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
