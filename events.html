@@ -9,12 +9,13 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="glassmorphism.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 
-<body>
+<body class="glass-background">
 
-    <nav class="glass-nav">
+    <nav class="glass-nav glass-element">
         <div class="logo">
             <img src="assets/logo-transparent.png" alt="Udaan Logo" style="height: 50px; vertical-align: middle;">
             UDAAN
@@ -36,14 +37,14 @@
 
             <!-- Category Tabs -->
             <div class="category-tabs">
-                <button class="cat-btn active" data-category="all">All</button>
-                <button class="cat-btn" data-category="workshop">Workshops</button>
-                <button class="cat-btn" data-category="talk">Talks</button>
-                <button class="cat-btn" data-category="competition">Competitions</button>
+                <button class="cat-btn glass-tab active" data-category="all">All</button>
+                <button class="cat-btn glass-tab" data-category="workshop">Workshops</button>
+                <button class="cat-btn glass-tab" data-category="talk">Talks</button>
+                <button class="cat-btn glass-tab" data-category="competition">Competitions</button>
             </div>
 
             <!-- Day Selection -->
-            <div class="day-filter-container">
+            <div class="day-filter-container glass-element">
                 <p>Select Day:</p>
                 <div class="day-radios">
                     <label class="day-radio active"><input type="radio" name="day" value="all" checked> Any Day</label>
@@ -55,63 +56,63 @@
 
             <div class="events-grid" id="events-grid">
                 <!-- Day 1 -->
-                <div class="event-card" data-category="event" data-day="day1">
+                <div class="event-card glass-element" data-category="event" data-day="day1">
                     <div class="time">09:00 - 09:30</div>
                     <div class="details">
                         <h3>Registration & Kit Distribution</h3>
                         <div class="tags"><span class="tag">Event</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="event" data-day="day1">
+                <div class="event-card glass-element" data-category="event" data-day="day1">
                     <div class="time">09:30 - 10:30</div>
                     <div class="details">
                         <h3>Inaugural Ceremony</h3>
                         <div class="tags"><span class="tag">Event</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="event" data-day="day1">
+                <div class="event-card glass-element" data-category="event" data-day="day1">
                     <div class="time">10:30 - 11:00</div>
                     <div class="details">
                         <h3>High Tea & Networking</h3>
                         <div class="tags"><span class="tag">Networking</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="competition" data-day="day1">
+                <div class="event-card glass-element" data-category="competition" data-day="day1">
                     <div class="time">11:00 - 11:30</div>
                     <div class="details">
                         <h3>Project Presentation</h3>
                         <div class="tags"><span class="tag">Competition</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="talk" data-day="day1">
+                <div class="event-card glass-element" data-category="talk" data-day="day1">
                     <div class="time">11:30 - 13:00</div>
                     <div class="details">
                         <h3>Industry Talk Series</h3>
                         <div class="tags"><span class="tag">Talk</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="event" data-day="day1">
+                <div class="event-card glass-element" data-category="event" data-day="day1">
                     <div class="time">13:00 - 14:00</div>
                     <div class="details">
                         <h3>Lunch Break</h3>
                         <div class="tags"><span class="tag">Break</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="talk" data-day="day1">
+                <div class="event-card glass-element" data-category="talk" data-day="day1">
                     <div class="time">14:00 - 15:30</div>
                     <div class="details">
                         <h3>Panel: Skilling for Industry</h3>
                         <div class="tags"><span class="tag">Panel</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="workshop" data-day="day1">
+                <div class="event-card glass-element" data-category="workshop" data-day="day1">
                     <div class="time">15:30 - 17:00</div>
                     <div class="details">
                         <h3>Resume Building & LinkedIn</h3>
                         <div class="tags"><span class="tag">Workshop</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="event" data-day="day1">
+                <div class="event-card glass-element" data-category="event" data-day="day1">
                     <div class="time">17:00 - 18:00</div>
                     <div class="details">
                         <h3>High Tea & Networking</h3>
@@ -120,14 +121,14 @@
                 </div>
 
                 <!-- Day 2 -->
-                <div class="event-card" data-category="workshop" data-day="day2">
+                <div class="event-card glass-element" data-category="workshop" data-day="day2">
                     <div class="time">09:00 - 11:00</div>
                     <div class="details">
                         <h3>The Crucible: Consulting</h3>
                         <div class="tags"><span class="tag">Workshop</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="talk" data-day="day2">
+                <div class="event-card glass-element" data-category="talk" data-day="day2">
                     <div class="time">11:00 - 13:00</div>
                     <div class="details">
                         <h3>Financial Management</h3>
@@ -141,7 +142,7 @@
                         <div class="tags"><span class="tag">Break</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="workshop" data-day="day2">
+                <div class="event-card glass-element" data-category="workshop" data-day="day2">
                     <div class="time">14:30 - 16:30</div>
                     <div class="details">
                         <h3>AWS Workshop</h3>
@@ -155,7 +156,7 @@
                         <div class="tags"><span class="tag">Networking</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="talk" data-day="day2">
+                <div class="event-card glass-element" data-category="talk" data-day="day2">
                     <div class="time">17:00 - 18:00</div>
                     <div class="details">
                         <h3>Entrepreneurship Conf</h3>
@@ -164,14 +165,14 @@
                 </div>
 
                 <!-- Day 3 -->
-                <div class="event-card" data-category="talk" data-day="day3">
+                <div class="event-card glass-element" data-category="talk" data-day="day3">
                     <div class="time">09:00 - 11:00</div>
                     <div class="details">
                         <h3>Panel: Civil Services</h3>
                         <div class="tags"><span class="tag">Panel</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="competition" data-day="day3">
+                <div class="event-card glass-element" data-category="competition" data-day="day3">
                     <div class="time">11:00 - 13:00</div>
                     <div class="details">
                         <h3>The Compass: Policy Case</h3>
@@ -185,7 +186,7 @@
                         <div class="tags"><span class="tag">Break</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="talk" data-day="day3">
+                <div class="event-card glass-element" data-category="talk" data-day="day3">
                     <div class="time">14:00 - 16:30</div>
                     <div class="details">
                         <h3>Motivational Speech</h3>
@@ -199,7 +200,7 @@
                         <div class="tags"><span class="tag">Networking</span></div>
                     </div>
                 </div>
-                <div class="event-card" data-category="competition" data-day="day3">
+                <div class="event-card glass-element" data-category="competition" data-day="day3">
                     <div class="time">17:00 - 18:00</div>
                     <div class="details">
                         <h3>Prize Distribution</h3>
@@ -218,6 +219,17 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="liquid-interactive.js"></script>
+    <script src="liquid-background.js"></script>
+    <!-- SVG Filter for Liquid Glass Distortion -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="glass-distortion">
+            <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="1" result="turbulence" />
+            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="5" xChannelSelector="R"
+                yChannelSelector="G" />
+        </filter>
+    </svg>
 </body>
 
 </html>

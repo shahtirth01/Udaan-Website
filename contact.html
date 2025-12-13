@@ -9,11 +9,12 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="glassmorphism.css">
 </head>
 
-<body>
+<body class="glass-background">
 
-    <nav class="glass-nav">
+    <nav class="glass-nav glass-element">
         <div class="logo">
             <img src="assets/logo-transparent.png" alt="Udaan Logo" style="height: 50px; vertical-align: middle;">
             UDAAN
@@ -31,7 +32,8 @@
     </div>
 
     <section class="section" style="text-align: center;">
-        <div class="container">
+        <div class="container glass-element"
+            style="padding: 3rem; max-width: 800px; margin: 0 auto; border-radius: 20px;">
             <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem;">Have questions about the fest? Reach
                 out to the Student Development Council.</p>
 
@@ -49,6 +51,16 @@
             <p>&copy; 2026 Student Development Council.</p>
         </div>
     </footer>
+    <script src="liquid-interactive.js"></script>
+    <script src="liquid-background.js"></script>
+    <!-- SVG Filter for Liquid Glass Distortion -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="glass-distortion">
+            <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="1" result="turbulence" />
+            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="5" xChannelSelector="R"
+                yChannelSelector="G" />
+        </filter>
+    </svg>
 </body>
 
 </html>

@@ -9,11 +9,12 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="glassmorphism.css">
 </head>
 
-<body>
+<body class="glass-background">
 
-    <nav class="glass-nav">
+    <nav class="glass-nav glass-element">
         <div class="logo">
             <img src="assets/logo-new.png" alt="Udaan Logo" style="height: 60px; vertical-align: middle;">
             UDAAN
@@ -44,10 +45,10 @@
 
             <!-- Tab Navigation -->
             <div class="about-tabs">
-                <button class="about-tab-btn active" data-tab="gallery">Gallery</button>
-                <button class="about-tab-btn" data-tab="sponsorship">Sponsorship</button>
-                <button class="about-tab-btn" data-tab="social">Social Media</button>
-                <button class="about-tab-btn" data-tab="team">Team Members</button>
+                <button class="about-tab-btn glass-tab active" data-tab="gallery">Gallery</button>
+                <button class="about-tab-btn glass-tab" data-tab="sponsorship">Sponsorship</button>
+                <button class="about-tab-btn glass-tab" data-tab="social">Social Media</button>
+                <button class="about-tab-btn glass-tab" data-tab="team">Team Members</button>
             </div>
 
             <!-- Tab Content -->
@@ -72,7 +73,7 @@
             <div class="about-tab-content" id="sponsorship-tab">
                 <h3 style="text-align: center; margin-bottom: 2rem;">Our Sponsors</h3>
                 <div class="sponsors-grid">
-                    <div class="sponsor-card">
+                    <div class="sponsor-card glass-element">
                         <div class="sponsor-logo">Google</div>
                         <p>Technology Partner</p>
                     </div>
@@ -94,7 +95,7 @@
             <div class="about-tab-content" id="social-tab">
                 <h3 style="text-align: center; margin-bottom: 2rem;">Connect With Us</h3>
                 <div class="social-links">
-                    <a href="#" class="social-card" data-platform="linkedin">
+                    <a href="#" class="social-card glass-element" data-platform="linkedin">
                         <div class="social-icon">💼</div>
                         <h4>LinkedIn</h4>
                         <p>Link will be added soon</p>
@@ -118,22 +119,22 @@
 
                 <!-- Sub Tabs -->
                 <div class="team-tabs">
-                    <button class="team-tab-btn active" data-tab="faculty">Faculty</button>
-                    <button class="team-tab-btn" data-tab="students">Students</button>
+                    <button class="team-tab-btn glass-tab active" data-tab="faculty">Faculty</button>
+                    <button class="team-tab-btn glass-tab" data-tab="students">Students</button>
                 </div>
 
                 <!-- Faculty Content -->
                 <div class="team-tab-content active" id="faculty-tab">
                     <div class="team-grid">
-                        <div class="team-card">
+                        <div class="team-card glass-element">
                             <h4>Akash Anil</h4>
                             <p>Faculty Coordinator</p>
                         </div>
-                        <div class="team-card">
+                        <div class="team-card glass-element">
                             <h4>Biswajit Patra</h4>
                             <p>Faculty Coordinator</p>
                         </div>
-                        <div class="team-card">
+                        <div class="team-card glass-element">
                             <h4>Feroz Sir</h4>
                             <p>Faculty Advisor</p>
                         </div>
@@ -143,11 +144,11 @@
                 <!-- Student Content -->
                 <div class="team-tab-content" id="students-tab">
                     <div class="team-grid">
-                        <div class="team-card">
+                        <div class="team-card glass-element">
                             <h4>Madhav</h4>
                             <p>Student Lead</p>
                         </div>
-                        <div class="team-card">
+                        <div class="team-card glass-element">
                             <h4>Tirth</h4>
                             <p>Web Developer</p>
                         </div>
@@ -166,6 +167,17 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="liquid-interactive.js"></script>
+    <script src="liquid-background.js"></script>
+    <!-- SVG Filter for Liquid Glass Distortion -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="glass-distortion">
+            <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="1" result="turbulence" />
+            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="5" xChannelSelector="R"
+                yChannelSelector="G" />
+        </filter>
+    </svg>
 </body>
 
 </html>

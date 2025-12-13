@@ -4,11 +4,14 @@
     --accent-gold: #ffcc29;
     --accent-gold-hover: #e6b825;
     --text-light: #f4f4f4;
+    /* Revert to White */
     --text-dim: #cccccc;
+    /* Revert to Light Gray */
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
-    --font-main: 'Georgia', serif;
-    --font-serif: 'Georgia', serif;
+    --font-main: 'Outfit', sans-serif;
+    --font-serif: 'Outfit', sans-serif;
+    /* Unifying font for modern look */
 }
 
 * {
@@ -18,13 +21,12 @@
 }
 
 body {
-    background-color: #05140f;
+    /* Background handled by .glass-background in glassmorphism.css */
     color: var(--text-light);
     font-family: var(--font-main);
     line-height: 1.6;
     overflow-x: hidden;
     font-size: 1.15rem;
-    /* Increased base size */
 }
 
 h1,
@@ -49,17 +51,18 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(5, 20, 15, 0.9);
-    backdrop-filter: blur(15px);
     z-index: 1000;
-    border-bottom: 1px solid var(--glass-border);
+    /* Glass styles now handled by .glass-element class usage or inheritance if applied */
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    letter-spacing: 2px;
+    margin-left: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    /* Bolder for premium feel */
+    letter-spacing: 0.5px;
     color: #fff;
+    text-transform: uppercase;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -78,9 +81,8 @@ a {
 /* Page Header (About, Events, Contact) */
 .page-header {
     height: 40vh;
-    background-image: url('assets/hero-bg.png');
-    background-size: cover;
-    background-position: center;
+    /* background-image: url('assets/hero-bg.png'); REMOVED for Liquid Theme */
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,13 +91,8 @@ a {
 }
 
 .page-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, #05140f, rgba(5, 20, 15, 0.7));
+    /* REMOVED Gradient Overlay to show Liquid Pattern */
+    display: none;
 }
 
 .page-header h1 {
@@ -124,13 +121,9 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/hero-bg.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.6;
-    z-index: -1;
-    /* Animation: Breathe + Rotate Hue */
-    animation: bg-alive 10s infinite alternate ease-in-out;
+    /* background-image: url('assets/hero-bg.png'); REMOVED for Glass Theme */
+    display: none;
+    /* Hide old background to show global glass gradient */
 }
 
 @keyframes bg-alive {
@@ -147,15 +140,8 @@ a {
 }
 
 #fireworks-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    /* Above bg, below content */
-    pointer-events: none;
-    opacity: 0.8;
+    display: none;
+    /* Hide fireworks for clean glass theme */
 }
 
 .hero-bg::after {
@@ -268,7 +254,7 @@ a {
 .cat-btn {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--glass-border);
-    color: var(--text-dim);
+    color: #000;
     padding: 1rem 2.5rem;
     border-radius: 5px;
     cursor: pointer;
@@ -418,7 +404,7 @@ a {
 footer {
     padding: 3rem 0;
     text-align: center;
-    border-top: 1px solid var(--glass-border);
+    /* border-top: 1px solid var(--glass-border); REMOVED for seamless look */
     margin-top: 4rem;
     color: var(--text-dim);
 }
