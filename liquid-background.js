@@ -15,12 +15,12 @@ let width, height;
 let orbs = [];
 
 // Configuration
-const ORB_COUNT = 6;
+const ORB_COUNT = 15; // More orbs for density
 const COLORS = [
-    'rgba(0, 212, 255, 0.4)',  // Cyan
-    'rgba(9, 9, 121, 0.4)',    // Deep Blue
-    'rgba(144, 19, 254, 0.4)', // Purple
-    'rgba(0, 31, 63, 0.6)'     // Midnight
+    'rgba(0, 255, 255, 0.6)',   // Neon Cyan
+    'rgba(180, 0, 255, 0.6)',   // Electric Purple
+    'rgba(255, 0, 150, 0.5)',   // Deep Magenta
+    'rgba(0, 100, 255, 0.5)'    // Bright Blue
 ];
 
 /* Orb Class */
@@ -32,11 +32,11 @@ class Orb {
     init() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
-        this.radius = Math.random() * 300 + 200; // Large, soft orbs
-        this.dx = (Math.random() - 0.5) * 1.5; // Slow movement
-        this.dy = (Math.random() - 0.5) * 1.5;
+        this.radius = Math.random() * 400 + 200; // Large volatile blobs
+        this.dx = (Math.random() - 0.5) * 3.0; // Faster movement
+        this.dy = (Math.random() - 0.5) * 3.0;
         this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
-        this.growth = Math.random() * 0.02 + 0.01;
+        this.growth = (Math.random() - 0.5) * 0.2; // Volatile growth
     }
 
     update() {

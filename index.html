@@ -15,8 +15,21 @@
 </head>
 
 <body class="glass-background">
+    <!-- Tech Grid Background -->
+    <div class="tech-grid"
+        style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-image: linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; z-index: -1;">
+    </div>
 
     <nav class="glass-nav glass-element">
+        <!-- HUD Corner: Top Left -->
+        <svg style="position: absolute; top: 0; left: 0; width: 20px; height: 20px; pointer-events: none;">
+            <path d="M2,20 V2 H20" fill="none" stroke="rgba(0, 255, 255, 0.8)" stroke-width="2" />
+        </svg>
+        <!-- HUD Corner: Bottom Right -->
+        <svg style="position: absolute; bottom: 0; right: 0; width: 20px; height: 20px; pointer-events: none;">
+            <path d="M18,0 V18 H0" fill="none" stroke="rgba(0, 255, 255, 0.8)" stroke-width="2" />
+        </svg>
+
         <div class="logo">
             <img src="assets/logo-new.png" alt="Udaan Logo" style="height: 60px; vertical-align: middle;">
             UDAAN
