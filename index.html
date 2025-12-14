@@ -10,6 +10,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="glassmorphism.css">
+    <link rel="stylesheet" href="text-animations.css">
+    <link rel="stylesheet" href="global-text-theme.css">
     <!-- GSAP for Smooth Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
@@ -122,20 +124,73 @@
             style="position: absolute; bottom: 15%; right: 15%; color: rgba(255,204,41,0.1); font-family: monospace; font-size: 1.5rem; animation: floatDoodle 32s infinite linear, fadePulse 3s infinite;">
             &lt;/&gt;
         </div>
+
+        <!-- WAVE 3: Quantum Particle Trail (Glowing Orbit) -->
+        <svg class="doodle" width="180" height="180" viewBox="0 0 100 100"
+            style="position: absolute; top: 45%; left: 8%; opacity: 0.2; animation: floatDoodle 50s infinite ease-in-out, spinSlow 15s linear infinite;">
+            <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="cyan" stroke-width="0.5" opacity="0.6" />
+            <ellipse cx="50" cy="50" rx="15" ry="40" fill="none" stroke="magenta" stroke-width="0.5" opacity="0.6" />
+            <circle cx="50" cy="50" r="3" fill="white">
+                <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite" />
+            </circle>
+        </svg>
+
+        <!-- WAVE 3: API Endpoint Notation (Fading) -->
+        <div
+            style="position: absolute; top: 70%; left: 25%; font-family: monospace; color: rgba(0, 255, 255, 0.08); font-size: 0.9rem; animation: floatDoodle 45s infinite linear reverse, fadePulse 6s infinite;">
+            GET /api/v1/data<br>
+            POST /api/auth<br>
+            PUT /api/update
+        </div>
+
+        <!-- WAVE 3: WiFi Signal Waves (Pulsing) -->
+        <svg class="doodle" width="100" height="100" viewBox="0 0 100 100"
+            style="position: absolute; bottom: 25%; right: 35%; opacity: 0.15; animation: floatDoodle 38s infinite ease-in-out;">
+            <path d="M50,70 Q30,50 50,30" fill="none" stroke="white" stroke-width="2">
+                <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite" />
+            </path>
+            <path d="M50,70 Q20,40 50,10" fill="none" stroke="white" stroke-width="1.5" opacity="0.7">
+                <animate attributeName="opacity" values="0.1;0.8;0.1" dur="3s" begin="0.5s" repeatCount="indefinite" />
+            </path>
+            <path d="M50,70 Q10,30 50,0" fill="none" stroke="white" stroke-width="1" opacity="0.5">
+                <animate attributeName="opacity" values="0.05;0.6;0.05" dur="3s" begin="1s" repeatCount="indefinite" />
+            </path>
+        </svg>
+
+        <!-- WAVE 3: Code Brackets Pair (Rotating) -->
+        <div
+            style="position: absolute; top: 15%; left: 70%; font-family: monospace; color: rgba(180, 0, 255, 0.1); font-size: 3rem; animation: floatDoodle 42s infinite linear, spinSlow 30s linear infinite;">
+            { }
+        </div>
+
+        <!-- WAVE 3: Terminal Window (Glitching) -->
+        <svg class="doodle" width="200" height="120" viewBox="0 0 100 60"
+            style="position: absolute; bottom: 5%; left: 45%; opacity: 0.1; animation: floatDoodle 55s infinite ease-in-out reverse, glitch 12s infinite steps(5);">
+            <rect x="5" y="5" width="90" height="50" fill="none" stroke="lime" stroke-width="1" rx="2" />
+            <line x1="5" y1="15" x2="95" y2="15" stroke="lime" stroke-width="0.5" />
+            <text x="10" y="28" font-family="monospace" font-size="6" fill="lime">$ npm run dev</text>
+            <text x="10" y="38" font-family="monospace" font-size="5" fill="lime" opacity="0.7">Building...</text>
+            <rect x="10" y="43" width="80" height="2" fill="lime" opacity="0.3">
+                <animate attributeName="width" values="0;80;0" dur="4s" repeatCount="indefinite" />
+            </rect>
+        </svg>
     </div>
 
     <header class="hero">
         <canvas id="fireworks-canvas"></canvas>
         <div class="hero-bg"></div>
         <div class="hero-content">
-            <p class="eyebrow">Student Development Council Presents</p>
+            <p class="eyebrow" id="eyebrow-text">Student Development Council Presents</p>
             <img src="assets/logo-new.png" alt="Udaan Bird" class="hero-logo-img"
                 style="height: 250px; margin-bottom: 2rem; filter: drop-shadow(0 0 20px rgba(255,204,41,0.3));">
 
-            <h1 class="title-main">UDAAN <span class="year">'26</span></h1>
-            <p class="subtitle">Soar Beyond Horizons</p>
+            <h1 class="title-main">
+                <span class="title-udaan">UDAAN</span>
+                <span class="year year-glow">'26</span>
+            </h1>
+            <p class="subtitle subtitle-dynamic" id="subtitle-text">Soar Beyond Horizons</p>
             <div class="cta-group">
-                <a href="events.html" class="btn btn-primary">Via Events</a>
+                <a href="events.html" class="btn btn-primary">View Events</a>
                 <a href="about.html" class="btn btn-secondary">Learn More</a>
             </div>
         </div>

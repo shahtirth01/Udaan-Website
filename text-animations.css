@@ -1,0 +1,162 @@
+/* Dynamic Text Animations for Home Page */
+
+/* Eyebrow Typing Effect */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#eyebrow-text {
+    overflow: hidden;
+    border-right: 2px solid rgba(0, 255, 255, 0.8);
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typewriter 3s steps(44) 0.5s forwards, blink 0.75s step-end infinite;
+}
+
+/* Title Glow and Pulse */
+.title-udaan {
+    display: inline-block;
+    animation: titlePulse 3s ease-in-out infinite, titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titlePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow:
+            0 0 10px rgba(0, 255, 255, 0.5),
+            0 0 20px rgba(0, 255, 255, 0.3),
+            0 0 30px rgba(0, 255, 255, 0.2);
+    }
+
+    100% {
+        text-shadow:
+            0 0 20px rgba(255, 0, 150, 0.6),
+            0 0 40px rgba(255, 0, 150, 0.4),
+            0 0 60px rgba(255, 0, 150, 0.3);
+    }
+}
+
+/* Year Badge Animation */
+.year-glow {
+    display: inline-block;
+    animation: yearFloat 3s ease-in-out infinite, yearColorShift 4s linear infinite;
+    background: linear-gradient(135deg, #00ffff, #ff0096);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@keyframes yearFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+@keyframes yearColorShift {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Subtitle Reveal Effect */
+.subtitle-dynamic {
+    opacity: 0;
+    animation: subtitleReveal 1s ease-out 3.5s forwards, subtitleShimmer 3s ease-in-out 4.5s infinite;
+}
+
+@keyframes subtitleReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes subtitleShimmer {
+
+    0%,
+    100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+    }
+}
+
+/* Enhanced Button Animations */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    animation: btnPulse 2s ease-in-out infinite;
+}
+
+@keyframes btnPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.3);
+    }
+}
